@@ -1,0 +1,79 @@
+[
+  {
+    "nama_ujian": "Ujian Matematika Dasar",
+    "deskripsi": "Ujian tingkat dasar untuk mata pelajaran matematika",
+    "durasi_ujian": 60,
+    "waktu_mulai": "2023-12-01T09:00:00Z",
+    "pengawas": "John Doe"
+  },
+  {
+    "nama_ujian": "Ujian Bahasa Inggris",
+    "deskripsi": "Ujian keterampilan berbahasa Inggris",
+    "durasi_ujian": 60,
+    "waktu_mulai": "2023-12-05T10:30:00Z",
+    "pengawas": "Jane Smith"
+  },
+  {
+    "nama_ujian": "Ujian IPA",
+    "deskripsi": "Ujian Ilmu Pengetahuan Alam",
+    "durasi_ujian": 60,
+    "waktu_mulai": "2023-12-10T13:15:00Z",
+    "pengawas": "Michael Johnson"
+  },
+  {
+    "nama_ujian": "Ujian Sejarah",
+    "deskripsi": "Ujian sejarah dunia",
+    "durasi_ujian": 60,
+    "waktu_mulai": "2023-12-15T11:00:00Z",
+    "pengawas": "Emily Brown"
+  },
+  {
+    "nama_ujian": "Ujian Kimia",
+    "deskripsi": "Ujian mata pelajaran kimia",
+    "durasi_ujian": 60,
+    "waktu_mulai": "2023-12-20T14:30:00Z",
+    "pengawas": "Daniel White"
+  },
+  {
+    "nama_ujian": "Ujian Geografi",
+    "deskripsi": "Ujian topografi dan geografi dunia",
+    "durasi_ujian": 60,
+    "waktu_mulai": "2023-12-25T09:45:00Z",
+    "pengawas": "Sophia Miller"
+  },
+  {
+    "nama_ujian": "Ujian Seni Rupa",
+    "deskripsi": "Ujian seni dan keterampilan rupa",
+    "durasi_ujian": 60,
+    "waktu_mulai": "2023-12-30T12:00:00Z",
+    "pengawas": "Andrew Davis"
+  },
+  {
+    "nama_ujian": "Ujian Pendidikan Agama",
+    "deskripsi": "Ujian keagamaan dan moral",
+    "durasi_ujian": 60,
+    "waktu_mulai": "2024-01-05T10:00:00Z",
+    "pengawas": "Olivia Wilson"
+  },
+  {
+    "nama_ujian": "Ujian Teknologi Informasi",
+    "deskripsi": "Ujian pengetahuan teknologi informasi",
+    "durasi_ujian": 60,
+    "waktu_mulai": "2024-01-10T13:45:00Z",
+    "pengawas": "William Harris"
+  },
+  {
+    "nama_ujian": "Ujian Musik",
+    "deskripsi": "Ujian pemahaman dan apresiasi musik",
+    "durasi_ujian": 60,
+    "waktu_mulai": "2024-01-15T11:30:00Z",
+    "pengawas": "Ava Martinez"
+  },
+  {
+    "nama_ujian": "Ujian Penjaskes",
+    "deskripsi": "Ujian pendidikan jasmani dan kesehatan",
+    "durasi_ujian": 60,
+    "waktu_mulai": "2024-01-20T14:15:00Z",
+    "pengawas": "Ethan Turner"
+  }
+]

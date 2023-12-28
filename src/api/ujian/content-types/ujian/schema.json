@@ -1,0 +1,77 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ujians",
+  "info": {
+    "singularName": "ujian",
+    "pluralName": "ujians",
+    "displayName": "Ujian",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nama_ujian": {
+      "type": "string",
+      "required": true
+    },
+    "deskripsi": {
+      "type": "text"
+    },
+    "durasi_ujian": {
+      "type": "integer",
+      "default": 60,
+      "required": true
+    },
+    "waktu_mulai": {
+      "type": "datetime",
+      "required": true
+    },
+    "pengawas": {
+      "type": "string",
+      "required": true
+    },
+    "hasil_ujian": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::hasil-ujian.hasil-ujian",
+      "mappedBy": "ujian"
+    },
+    "ruang_ujian": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::ruang-ujian.ruang-ujian",
+      "inversedBy": "ujians"
+    },
+    "soal_ujians": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::soal-ujian.soal-ujian",
+      "mappedBy": "ujian"
+    },
+    "soal": {
+      "displayName": "soal",
+      "type": "component",
+      "repeatable": true,
+      "component": "soals.soal"
+    },
+    "media": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "ujians"
+    }
+  }
+}

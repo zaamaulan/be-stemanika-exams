@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_soals_soals",
+  "info": {
+    "displayName": "soal",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "teks_pertanyaan": {
+      "type": "string"
+    },
+    "pilihan_jawaban": {
+      "type": "json"
+    },
+    "jawaban_benar": {
+      "type": "string"
+    },
+    "poin_nilai": {
+      "type": "integer",
+      "default": 4
+    }
+  }
+}

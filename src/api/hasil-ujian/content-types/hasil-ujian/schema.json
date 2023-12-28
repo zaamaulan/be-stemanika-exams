@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hasil_ujians",
+  "info": {
+    "singularName": "hasil-ujian",
+    "pluralName": "hasil-ujians",
+    "displayName": "Hasil Ujian"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ujian": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::ujian.ujian",
+      "inversedBy": "hasil_ujian"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "hasil_ujian"
+    },
+    "skor": {
+      "type": "integer",
+      "required": false
+    }
+  }
+}

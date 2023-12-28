@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gurus",
+  "info": {
+    "singularName": "guru",
+    "pluralName": "gurus",
+    "displayName": "Guru",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nama_kelas": {
+      "type": "string",
+      "required": true
+    },
+    "nama_guru": {
+      "type": "string",
+      "required": true
+    },
+    "ruang_ujian": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::ruang-ujian.ruang-ujian",
+      "mappedBy": "guru"
+    }
+  }
+}

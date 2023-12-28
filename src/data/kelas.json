@@ -1,0 +1,250 @@
+[
+ {
+   "id": 1,
+   "kelas": "X DPIB 1"
+ },
+ {
+   "id": 2,
+   "kelas": "X DPIB 2"
+ },
+ {
+   "id": 3,
+   "kelas": "X DPIB 3"
+ },
+ {
+   "id": 4,
+   "kelas": "XI DPIB 1"
+ },
+ {
+   "id": 5,
+   "kelas": "XI DPIB 2"
+ },
+ {
+   "id": 6,
+   "kelas": "XI DPIB 3"
+ },
+ {
+   "id": 7,
+   "kelas": "XII DPIB 1"
+ },
+ {
+   "id": 8,
+   "kelas": "XII DPIB 2"
+ },
+ {
+   "id": 9,
+   "kelas": "XII DPIB 3"
+ },
+ {
+   "id": 10,
+   "kelas": "X TKL 1"
+ },
+ {
+   "id": 11,
+   "kelas": "X TKL 2"
+ },
+ {
+   "id": 12,
+   "kelas": "X TKL 3"
+ },
+ {
+   "id": 13,
+   "kelas": "X TKL 4"
+ },
+ {
+   "id": 14,
+   "kelas": "XI TITL 1"
+ },
+ {
+   "id": 15,
+   "kelas": "XI TITL 2"
+ },
+ {
+   "id": 16,
+   "kelas": "XI TITL 3"
+ },
+ {
+   "id": 17,
+   "kelas": "XI TITL 4"
+ },
+ {
+   "id": 18,
+   "kelas": "XII TITL 1"
+ },
+ {
+   "id": 19,
+   "kelas": "XII TITL 2"
+ },
+ {
+   "id": 20,
+   "kelas": "XII TITL 3"
+ },
+ {
+   "id": 21,
+   "kelas": "XII TITL 4"
+ },
+ {
+   "id": 22,
+   "kelas": "X TM 1"
+ },
+ {
+   "id": 23,
+   "kelas": "X TM 2"
+ },
+ {
+   "id": 24,
+   "kelas": "X TM 3"
+ },
+ {
+   "id": 25,
+   "kelas": "X TM 4"
+ },
+ {
+   "id": 26,
+   "kelas": "X TM 5"
+ },
+ {
+   "id": 27,
+   "kelas": "XI TPM 1"
+ },
+ {
+   "id": 28,
+   "kelas": "XI TPM 2"
+ },
+ {
+   "id": 29,
+   "kelas": "XI TPM 3"
+ },
+ {
+   "id": 30,
+   "kelas": "XI TPM 4"
+ },
+ {
+   "id": 31,
+   "kelas": "XI TPM 5"
+ },
+ {
+   "id": 32,
+   "kelas": "XII TPM 1"
+ },
+ {
+   "id": 33,
+   "kelas": "XII TPM 2"
+ },
+ {
+   "id": 34,
+   "kelas": "XII TPM 3"
+ },
+ {
+   "id": 35,
+   "kelas": "XII TPM 4"
+ },
+ {
+   "id": 36,
+   "kelas": "XII TPM 5"
+ },
+ {
+   "id": 37,
+   "kelas": "XI TKR 1"
+ },
+ {
+   "id": 38,
+   "kelas": "XI TKR 2"
+ },
+ {
+   "id": 39,
+   "kelas": "XI TKR 3"
+ },
+ {
+   "id": 40,
+   "kelas": "XI TKR 4"
+ },
+ {
+   "id": 41,
+   "kelas": "XII TKR 1"
+ },
+ {
+   "id": 42,
+   "kelas": "XII TKR 2"
+ },
+ {
+   "id": 43,
+   "kelas": "XII TKR 3"
+ },
+ {
+   "id": 44,
+   "kelas": "XII TKR 4"
+ },
+ {
+   "id": 45,
+   "kelas": "X TKJ 1"
+ },
+ {
+   "id": 46,
+   "kelas": "X TKJ 2"
+ },
+ {
+   "id": 47,
+   "kelas": "X TKJ 3"
+ },
+ {
+   "id": 48,
+   "kelas": "XI TKJ 1"
+ },
+ {
+   "id": 49,
+   "kelas": "XI TKJ 2"
+ },
+ {
+   "id": 50,
+   "kelas": "XI TKJ 3"
+ },
+ {
+   "id": 51,
+   "kelas": "XII TKJ 1"
+ },
+ {
+   "id": 52,
+   "kelas": "XII TKJ 2"
+ },
+ {
+   "id": 53,
+   "kelas": "XII TKJ 3"
+ },
+ {
+   "id": 54,
+   "kelas": "X PPLG 1"
+ },
+ {
+   "id": 55,
+   "kelas": "X PPLG 2"
+ },
+ {
+   "id": 56,
+   "kelas": "X PPLG 3"
+ },
+ {
+   "id": 57,
+   "kelas": "XI RPL 1"
+ },
+ {
+   "id": 58,
+   "kelas": "XI RPL 2"
+ },
+ {
+   "id": 59,
+   "kelas": "XI RPL 3"
+ },
+ {
+   "id": 60,
+   "kelas": "XII RPL 1"
+ },
+ {
+   "id": 61,
+   "kelas": "XII RPL 2"
+ },
+ {
+   "id": 62,
+   "kelas": "XII RPL 3"
+ }
+]

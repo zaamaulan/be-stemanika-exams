@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kelass",
+  "info": {
+    "singularName": "kelas",
+    "pluralName": "kelass",
+    "displayName": "Kelas",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "kelas": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "users_permissions_users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "kelas"
+    }
+  }
+}
