@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * soal-ujian controller
+ * nilai controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::soal-ujian.soal-ujian');
+module.exports = createCoreController('api::nilai.nilai');

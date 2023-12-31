@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_nilai_nilais",
+  "info": {
+    "displayName": "nilai",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "nilai": {
+      "type": "integer",
+      "required": true
+    },
+    "ujian": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::ujian.ujian"
+    },
+    "nama_ujian": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

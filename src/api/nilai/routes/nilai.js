@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * hasil router
+ * nilai router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::hasil.hasil');
+module.exports = createCoreRouter('api::nilai.nilai');

@@ -65,29 +65,17 @@
       "inversedBy": "users",
       "configurable": false
     },
-    "hasil_ujian": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::hasil-ujian.hasil-ujian",
-      "mappedBy": "users_permissions_user"
-    },
     "kelas": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::kelas.kelas",
       "inversedBy": "users_permissions_users"
     },
-    "hasil": {
+    "nilai": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::hasil.hasil",
-      "mappedBy": "users_permissions_user"
-    },
-    "ujians": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::ujian.ujian",
-      "inversedBy": "users"
+      "relation": "oneToMany",
+      "target": "api::nilai.nilai",
+      "mappedBy": "user"
     }
   }
 }

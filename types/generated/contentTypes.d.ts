@@ -659,25 +659,15 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'manyToOne',
       'plugin::users-permissions.role'
     >;
-    hasil_ujian: Attribute.Relation<
-      'plugin::users-permissions.user',
-      'oneToOne',
-      'api::hasil-ujian.hasil-ujian'
-    >;
     kelas: Attribute.Relation<
       'plugin::users-permissions.user',
       'manyToOne',
       'api::kelas.kelas'
     >;
-    hasil: Attribute.Relation<
+    nilai: Attribute.Relation<
       'plugin::users-permissions.user',
-      'oneToOne',
-      'api::hasil.hasil'
-    >;
-    ujians: Attribute.Relation<
-      'plugin::users-permissions.user',
-      'manyToMany',
-      'api::ujian.ujian'
+      'oneToMany',
+      'api::nilai.nilai'
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -710,90 +700,11 @@ export interface ApiGuruGuru extends Schema.CollectionType {
   attributes: {
     nama_kelas: Attribute.String & Attribute.Required;
     nama_guru: Attribute.String & Attribute.Required;
-    ruang_ujian: Attribute.Relation<
-      'api::guru.guru',
-      'oneToOne',
-      'api::ruang-ujian.ruang-ujian'
-    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<'api::guru.guru', 'oneToOne', 'admin::user'> &
       Attribute.Private;
     updatedBy: Attribute.Relation<'api::guru.guru', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-  };
-}
-
-export interface ApiHasilHasil extends Schema.CollectionType {
-  collectionName: 'hasils';
-  info: {
-    singularName: 'hasil';
-    pluralName: 'hasils';
-    displayName: 'Hasil';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    skor: Attribute.Integer;
-    users_permissions_user: Attribute.Relation<
-      'api::hasil.hasil',
-      'oneToOne',
-      'plugin::users-permissions.user'
-    >;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::hasil.hasil',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::hasil.hasil',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiHasilUjianHasilUjian extends Schema.CollectionType {
-  collectionName: 'hasil_ujians';
-  info: {
-    singularName: 'hasil-ujian';
-    pluralName: 'hasil-ujians';
-    displayName: 'Hasil Ujian';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    ujian: Attribute.Relation<
-      'api::hasil-ujian.hasil-ujian',
-      'oneToOne',
-      'api::ujian.ujian'
-    >;
-    users_permissions_user: Attribute.Relation<
-      'api::hasil-ujian.hasil-ujian',
-      'oneToOne',
-      'plugin::users-permissions.user'
-    >;
-    skor: Attribute.Integer;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::hasil-ujian.hasil-ujian',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::hasil-ujian.hasil-ujian',
-      'oneToOne',
-      'admin::user'
-    > &
       Attribute.Private;
   };
 }
@@ -833,84 +744,40 @@ export interface ApiKelasKelas extends Schema.CollectionType {
   };
 }
 
-export interface ApiRuangUjianRuangUjian extends Schema.CollectionType {
-  collectionName: 'ruang_ujians';
+export interface ApiNilaiNilai extends Schema.CollectionType {
+  collectionName: 'nilais';
   info: {
-    singularName: 'ruang-ujian';
-    pluralName: 'ruang-ujians';
-    displayName: 'Ruang Ujian';
+    singularName: 'nilai';
+    pluralName: 'nilais';
+    displayName: 'Nilai';
     description: '';
   };
   options: {
     draftAndPublish: false;
   };
   attributes: {
-    ruangan: Attribute.String & Attribute.Required;
-    ujians: Attribute.Relation<
-      'api::ruang-ujian.ruang-ujian',
-      'oneToMany',
-      'api::ujian.ujian'
-    >;
-    guru: Attribute.Relation<
-      'api::ruang-ujian.ruang-ujian',
-      'oneToOne',
-      'api::guru.guru'
-    >;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::ruang-ujian.ruang-ujian',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::ruang-ujian.ruang-ujian',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiSoalUjianSoalUjian extends Schema.CollectionType {
-  collectionName: 'soal_ujians';
-  info: {
-    singularName: 'soal-ujian';
-    pluralName: 'soal-ujians';
-    displayName: 'Soal Ujian';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    teks_pertanyaan: Attribute.Text & Attribute.Required;
-    pilihan_jawaban: Attribute.JSON & Attribute.Required;
-    jawaban_benar: Attribute.Text & Attribute.Required;
-    poin_nilai: Attribute.Integer &
-      Attribute.Required &
-      Attribute.SetMinMax<{
-        min: 0;
-        max: 100;
-      }> &
-      Attribute.DefaultTo<4>;
+    nilai: Attribute.Integer;
     ujian: Attribute.Relation<
-      'api::soal-ujian.soal-ujian',
-      'manyToOne',
+      'api::nilai.nilai',
+      'oneToOne',
       'api::ujian.ujian'
     >;
+    user: Attribute.Relation<
+      'api::nilai.nilai',
+      'manyToOne',
+      'plugin::users-permissions.user'
+    >;
+    nama_ujian: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::soal-ujian.soal-ujian',
+      'api::nilai.nilai',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::soal-ujian.soal-ujian',
+      'api::nilai.nilai',
       'oneToOne',
       'admin::user'
     > &
@@ -937,28 +804,8 @@ export interface ApiUjianUjian extends Schema.CollectionType {
       Attribute.DefaultTo<60>;
     waktu_mulai: Attribute.DateTime & Attribute.Required;
     pengawas: Attribute.String & Attribute.Required;
-    hasil_ujian: Attribute.Relation<
-      'api::ujian.ujian',
-      'oneToOne',
-      'api::hasil-ujian.hasil-ujian'
-    >;
-    ruang_ujian: Attribute.Relation<
-      'api::ujian.ujian',
-      'manyToOne',
-      'api::ruang-ujian.ruang-ujian'
-    >;
-    soal_ujians: Attribute.Relation<
-      'api::ujian.ujian',
-      'oneToMany',
-      'api::soal-ujian.soal-ujian'
-    >;
     soal: Attribute.Component<'soals.soal', true>;
     media: Attribute.Media;
-    users: Attribute.Relation<
-      'api::ujian.ujian',
-      'manyToMany',
-      'plugin::users-permissions.user'
-    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -1023,11 +870,8 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::guru.guru': ApiGuruGuru;
-      'api::hasil.hasil': ApiHasilHasil;
-      'api::hasil-ujian.hasil-ujian': ApiHasilUjianHasilUjian;
       'api::kelas.kelas': ApiKelasKelas;
-      'api::ruang-ujian.ruang-ujian': ApiRuangUjianRuangUjian;
-      'api::soal-ujian.soal-ujian': ApiSoalUjianSoalUjian;
+      'api::nilai.nilai': ApiNilaiNilai;
       'api::ujian.ujian': ApiUjianUjian;
       'api::waktu-ujian.waktu-ujian': ApiWaktuUjianWaktuUjian;
     }

@@ -32,24 +32,6 @@
       "type": "string",
       "required": true
     },
-    "hasil_ujian": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::hasil-ujian.hasil-ujian",
-      "mappedBy": "ujian"
-    },
-    "ruang_ujian": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::ruang-ujian.ruang-ujian",
-      "inversedBy": "ujians"
-    },
-    "soal_ujians": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::soal-ujian.soal-ujian",
-      "mappedBy": "ujian"
-    },
     "soal": {
       "displayName": "soal",
       "type": "component",
@@ -66,12 +48,6 @@
         "videos",
         "audios"
       ]
-    },
-    "users": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "plugin::users-permissions.user",
-      "mappedBy": "ujians"
     }
   }
 }

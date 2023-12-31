@@ -1,5 +1,18 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface NilaiNilai extends Schema.Component {
+  collectionName: 'components_nilai_nilais';
+  info: {
+    displayName: 'nilai';
+    description: '';
+  };
+  attributes: {
+    nilai: Attribute.Integer & Attribute.Required;
+    ujian: Attribute.Relation<'nilai.nilai', 'oneToOne', 'api::ujian.ujian'>;
+    nama_ujian: Attribute.String & Attribute.Required;
+  };
+}
+
 export interface SoalsSoal extends Schema.Component {
   collectionName: 'components_soals_soals';
   info: {
@@ -17,6 +30,7 @@ export interface SoalsSoal extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'nilai.nilai': NilaiNilai;
       'soals.soal': SoalsSoal;
     }
   }

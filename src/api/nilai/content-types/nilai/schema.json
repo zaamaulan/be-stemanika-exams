@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "nilais",
+  "info": {
+    "singularName": "nilai",
+    "pluralName": "nilais",
+    "displayName": "Nilai",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nilai": {
+      "type": "integer"
+    },
+    "ujian": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::ujian.ujian"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "nilai"
+    },
+    "nama_ujian": {
+      "type": "string"
+    }
+  }
+}

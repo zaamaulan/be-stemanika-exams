@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * ruang-ujian service
+ * nilai service
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::ruang-ujian.ruang-ujian');
+module.exports = createCoreService('api::nilai.nilai');
