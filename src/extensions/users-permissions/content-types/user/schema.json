@@ -76,6 +76,10 @@
       "relation": "oneToMany",
       "target": "api::nilai.nilai",
       "mappedBy": "user"
+    },
+    "bio": {
+      "type": "text",
+      "maxLength": 200
     }
   }
 }

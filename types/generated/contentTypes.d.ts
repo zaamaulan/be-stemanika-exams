@@ -669,6 +669,10 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'oneToMany',
       'api::nilai.nilai'
     >;
+    bio: Attribute.Text &
+      Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -823,36 +827,6 @@ export interface ApiUjianUjian extends Schema.CollectionType {
   };
 }
 
-export interface ApiWaktuUjianWaktuUjian extends Schema.CollectionType {
-  collectionName: 'waktu_ujians';
-  info: {
-    singularName: 'waktu-ujian';
-    pluralName: 'waktu-ujians';
-    displayName: 'Waktu Ujian';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    waktu_mulai: Attribute.DateTime & Attribute.Required;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::waktu-ujian.waktu-ujian',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::waktu-ujian.waktu-ujian',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -873,7 +847,6 @@ declare module '@strapi/types' {
       'api::kelas.kelas': ApiKelasKelas;
       'api::nilai.nilai': ApiNilaiNilai;
       'api::ujian.ujian': ApiUjianUjian;
-      'api::waktu-ujian.waktu-ujian': ApiWaktuUjianWaktuUjian;
     }
   }
 }
